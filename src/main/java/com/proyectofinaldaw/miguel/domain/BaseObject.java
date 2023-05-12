@@ -27,7 +27,7 @@ public abstract class BaseObject implements Serializable{
 	
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	@CreationTimestamp

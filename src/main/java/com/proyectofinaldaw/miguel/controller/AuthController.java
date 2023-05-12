@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +16,6 @@ import com.proyectofinaldaw.miguel.utils.JWTUtil;
 @RestController
 @RequestMapping(value = "api/login")
 public class AuthController {
-
 	
 	@Autowired
 	private UserService service;
@@ -26,15 +24,16 @@ public class AuthController {
 	private JWTUtil jwtUtil;
 	
 	@PostMapping
-    public Map loginSocio(@RequestBody User user) {
-        Map respuesta = new HashMap();
-        User userlogged = service.getUserByCredentials(user);
-        System.out.println(userlogged);
-        if (userlogged!=null) {
-            String token = jwtUtil.create(String.valueOf(userlogged.getId()),userlogged.getEmail());
-            respuesta.put("token", token);
-            respuesta.put("success", "OK");
-        } else respuesta.put("success","FAIL");
-          return respuesta;
-    }
+	public Map login(@RequestBody User user) {
+		Map response = new HashMap();
+		User loggedUser = service.getUserByCredentials(user);
+		if(loggedUser != null) {
+			String tokenJWT = jwtUtil.create(String.valueOf(loggedUser.getId()), loggedUser.getEmail());
+
+			response.put("token", tokenJWT);
+            response.put("success", "OK");
+		} else response.put("success", "FAIL");
+		return response;
+	}
+
 }

@@ -16,5 +16,5 @@ public interface UserService {
 	public void delete(Long id);
 	
 	public User getUserByCredentials(User user);
-	
+		
 }
