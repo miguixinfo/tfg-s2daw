@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +16,7 @@ import com.proyectofinaldaw.miguel.utils.JWTUtil;
 
 @RestController
 @RequestMapping(value = "api/login")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class AuthController {
 	
 	@Autowired
