@@ -1,4 +1,4 @@
-package com.proyectofinaldaw.miguel.controller;
+package com.proyectofinaldaw.miguel.rest.controller;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.proyectofinaldaw.miguel.domain.User;
 import com.proyectofinaldaw.miguel.error.UserNotFoundException;
-import com.proyectofinaldaw.miguel.service.UserService;
+import com.proyectofinaldaw.miguel.rest.service.UserService;
 import com.proyectofinaldaw.miguel.utils.JWTUtil;
 
 import de.mkammerer.argon2.Argon2;
@@ -27,7 +27,6 @@ import io.swagger.v3.oas.annotations.Parameter;
 @RestController
 @RequestMapping(value = "api/users")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
-
 public class UserController {
 	
 	@Autowired
@@ -65,7 +64,6 @@ public class UserController {
 	@PostMapping
 	@ApiResponses(value = {
 			@ApiResponse(code = 200 , message = "User created"),
-			@ApiResponse(code = 404, message = "User not found")
 	})
 	@ResponseStatus(code = HttpStatus.CREATED)
 	public User saveUser(

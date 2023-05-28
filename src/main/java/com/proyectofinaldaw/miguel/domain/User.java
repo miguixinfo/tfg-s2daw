@@ -6,6 +6,7 @@ import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -26,12 +27,15 @@ public class User extends BaseObject implements Serializable{
 	 */
 	private static final long serialVersionUID = 8912500056933713272L;
 	
+	@NotNull(message = "name cannot be null!")
 	@Column(name = "name", nullable = false)
 	private String name;
 	
+	@NotNull(message = "email cannot be null!")
 	@Column(name = "email", nullable = false)
 	private String email;
 	
+	@NotNull(message = "password cannot be null")
 	@Column(name = "password", nullable = false)
 	private String password;
 	
