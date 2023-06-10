@@ -6,13 +6,10 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.proyectofinaldaw.miguel.domain.CableTray;
 import com.proyectofinaldaw.miguel.domain.DefaultInstallation;
 import com.proyectofinaldaw.miguel.domain.PowerStrip;
-import com.proyectofinaldaw.miguel.error.CableTrayNotFoundException;
 import com.proyectofinaldaw.miguel.error.DefaultInstallationNotFoundException;
 import com.proyectofinaldaw.miguel.error.PowerStripNotFoundException;
-import com.proyectofinaldaw.miguel.repository.CableTrayRepository;
 import com.proyectofinaldaw.miguel.repository.DefaultInstallationRepository;
 import com.proyectofinaldaw.miguel.repository.PowerStripRepository;
 import com.proyectofinaldaw.miguel.rest.service.DefaultInstallationService;

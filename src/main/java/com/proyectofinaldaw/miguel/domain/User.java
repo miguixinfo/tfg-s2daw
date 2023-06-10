@@ -32,7 +32,7 @@ public class User extends BaseObject implements Serializable{
 	private String name;
 	
 	@NotNull(message = "email cannot be null!")
-	@Column(name = "email", nullable = false)
+	@Column(name = "email", nullable = false, unique = true)
 	private String email;
 	
 	@NotNull(message = "password cannot be null")

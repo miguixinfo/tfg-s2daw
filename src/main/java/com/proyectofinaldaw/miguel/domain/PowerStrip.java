@@ -1,14 +1,10 @@
 package com.proyectofinaldaw.miguel.domain;
 
 import java.io.Serializable;
-import java.util.HashSet;
 import java.util.Objects;
-import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 
@@ -42,9 +38,6 @@ public class PowerStrip extends BaseObject implements Serializable{
 	
 	@Column(name = "url")
 	private String url;
-	
-	@OneToMany(mappedBy = "powerStrip", cascade = CascadeType.REFRESH, orphanRemoval = true)
-	private Set<DefaultInstallation> installations = new HashSet<>();
 
 	@Override
 	public int hashCode() {
