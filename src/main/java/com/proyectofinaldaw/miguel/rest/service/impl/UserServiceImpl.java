@@ -1,4 +1,4 @@
-package com.proyectofinaldaw.miguel.service.impl;
+package com.proyectofinaldaw.miguel.rest.service.impl;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import com.proyectofinaldaw.miguel.domain.User;
 import com.proyectofinaldaw.miguel.error.UserNotFoundException;
 import com.proyectofinaldaw.miguel.repository.UserRepository;
-import com.proyectofinaldaw.miguel.service.UserService;
+import com.proyectofinaldaw.miguel.rest.service.UserService;
 
 import de.mkammerer.argon2.Argon2;
 import de.mkammerer.argon2.Argon2Factory;

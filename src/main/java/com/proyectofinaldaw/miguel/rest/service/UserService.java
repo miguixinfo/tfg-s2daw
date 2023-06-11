@@ -1,4 +1,4 @@
-package com.proyectofinaldaw.miguel.service;
+package com.proyectofinaldaw.miguel.rest.service;
 
 import java.util.List;
 

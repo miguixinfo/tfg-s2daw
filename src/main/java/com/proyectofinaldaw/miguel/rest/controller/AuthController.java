@@ -1,4 +1,4 @@
-package com.proyectofinaldaw.miguel.controller;
+package com.proyectofinaldaw.miguel.rest.controller;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.proyectofinaldaw.miguel.domain.User;
-import com.proyectofinaldaw.miguel.service.UserService;
+import com.proyectofinaldaw.miguel.rest.service.UserService;
 import com.proyectofinaldaw.miguel.utils.JWTUtil;
 
 @RestController
